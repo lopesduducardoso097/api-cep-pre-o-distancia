@@ -1,0 +1,361 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fb;
+    color: #172033;
+}
+
+header {
+    height: 75px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9%;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #16213e;
+}
+
+.logo span {
+    color: #ff7b00;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ff7b00;
+}
+
+.hero {
+    min-height: 450px;
+    background: linear-gradient(120deg, #111c3b, #263e73);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 12%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tag {
+    background: #ff7b00;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.hero p {
+    color: #d5dbea;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff7b00;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e56800;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    font-size: 160px;
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,0.3));
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title span {
+    color: #ff7b00;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #777;
+    font-size: 14px;
+}
+
+.calculator {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.07);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #ff7b00;
+    box-shadow: 0 0 0 3px rgba(255,123,0,0.1);
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.input-area button {
+    background: #172747;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.input-area button:hover {
+    background: #ff7b00;
+}
+
+.address-box {
+    background: #f5f7fb;
+    border-left: 4px solid #ff7b00;
+    padding: 15px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+.calculate-btn {
+    width: 100%;
+    background: #ff7b00;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.calculate-btn:hover {
+    background: #e56800;
+}
+
+#mensagem {
+    text-align: center;
+    color: #e05252;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.results {
+    display: none;
+    margin-top: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.result-card {
+    background: #f5f7fb;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.result-card span,
+.price-card span {
+    font-size: 12px;
+    color: #777;
+}
+
+.result-card h3 {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.price-card {
+    grid-column: span 2;
+    text-align: center;
+    padding: 25px;
+    background: #172747;
+    border-radius: 12px;
+    color: white;
+}
+
+.price-card span {
+    color: #ddd;
+}
+
+.price-card h2 {
+    color: #ff9a32;
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.price-card small {
+    color: #ddd;
+}
+
+.how-it-works {
+    padding: 70px 10%;
+    background: white;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.step {
+    flex: 1;
+    padding: 25px;
+    background: #f5f7fb;
+    border-radius: 12px;
+}
+
+.step div {
+    background: #ff7b00;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: auto auto 15px;
+    font-weight: 700;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.step p {
+    color: #777;
+    font-size: 13px;
+}
+
+footer {
+    background: #111c3b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 12px;
+    line-height: 2;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 50px 8%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .calculator {
+        padding: 20px;
+    }
+
+    .results {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card {
+        grid-column: span 1;
+    }
+}
