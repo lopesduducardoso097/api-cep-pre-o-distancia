@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frete UNINASSAU</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🚀 Frete<span>UNI</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#consulta">Consultar CEP</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <span class="tag">ENTREGA RÁPIDA E PRÁTICA</span>
+
+            <h1>Calcule seu frete em poucos segundos.</h1>
+
+            <p>
+                Descubra a distância e o preço estimado de uma entrega
+                de moto saindo da UNINASSAU até seu endereço.
+            </p>
+
+            <a href="#consulta" class="btn">Calcular meu frete</a>
+        </div>
+
+        <div class="hero-image">
+            🛵
+        </div>
+    </section>
+
+    <main id="consulta">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>SIMULE SUA ENTREGA</span>
+                <h2>Onde você deseja receber?</h2>
+                <p>Digite seu CEP para localizar seu endereço.</p>
+            </div>
+
+            <div class="calculator">
+
+                <div class="form-group">
+                    <label for="cep">CEP de destino</label>
+
+                    <div class="input-area">
+                        <input
+                            type="text"
+                            id="cep"
+                            placeholder="Ex: 60000-000"
+                            maxlength="9"
+                        >
+
+                        <button id="buscarBtn" onclick="buscarCEP()">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+
+                <div id="endereco" class="address-box">
+                    O endereço aparecerá aqui após a consulta.
+                </div>
+
+                <div class="form-group">
+                    <label for="numero">Número do endereço</label>
+                    <input
+                        type="text"
+                        id="numero"
+                        placeholder="Ex: 250"
+                    >
+                </div>
+
+                <button class="calculate-btn" onclick="calcularFrete()">
+                    Calcular distância e frete
+                </button>
+
+                <p id="mensagem"></p>
+
+                <div class="results" id="resultado">
+
+                    <div class="result-card">
+                        <span>📍 Distância estimada</span>
+                        <h3 id="distancia">-- km</h3>
+                    </div>
+
+                    <div class="result-card">
+                        <span>🛵 Modalidade</span>
+                        <h3>Uber Moto (estimativa)</h3>
+                    </div>
+
+                    <div class="price-card">
+                        <span>Valor estimado do frete</span>
+                        <h2 id="preco">R$ 0,00</h2>
+                        <small>Valor simulado, não oficial da Uber.</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <section class="how-it-works" id="sobre">
+        <h2>Como funciona?</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <div>01</div>
+                <h3>Informe o CEP</h3>
+                <p>Digite o CEP do local de entrega.</p>
+            </div>
+
+            <div class="step">
+                <div>02</div>
+                <h3>Calcule a distância</h3>
+                <p>O sistema localiza o endereço e calcula a distância.</p>
+            </div>
+
+            <div class="step">
+                <div>03</div>
+                <h3>Veja o preço</h3>
+                <p>Receba uma estimativa do valor da entrega.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 FreteUNI | Projeto acadêmico UNINASSAU</p>
+        <p>Consulta de CEP via API pública ViaCEP.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
